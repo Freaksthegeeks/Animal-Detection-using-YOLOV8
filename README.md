@@ -23,16 +23,7 @@ This repository contains code for training and running an animal detection model
 - `yolov8n.pt` - YOLOv8 pretrained weights (small)
 - `dataset/`, `leopard/`, `wildboar/` - expected dataset folders (ignored by `.gitignore`)
 
-**Mermaid flow:**
 
-```mermaid
-  flowchart LR
-  A[Download dataset] --> B[Organize folders]
-  B --> C[Prepare labels (YOLO format)]
-  C --> D[Train model]
-  D --> E[Evaluate and export weights]
-  E --> F[Run inference / Auto-label]
-```
 
 Getting started
 ---------------

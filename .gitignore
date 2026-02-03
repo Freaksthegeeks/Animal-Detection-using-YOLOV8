@@ -1,0 +1,6 @@
+# Ignore dataset folders
+dataset/
+leopard/
+wildboar/
+animal_env/
+

@@ -77,6 +77,29 @@ Dataset sources
 
 If you use large datasets, keep them out of the repository (they are intentionally excluded).
 
+Workflow
+--------
+
+This section describes the typical workflow for preparing data, training, and running inference with this repository.
+
+1. Obtain or collect images and organize them into the repository folders.
+2. Prepare YOLO-format labels (one `.txt` per image) and place them alongside images.
+3. Configure training parameters in `animal_detection.py` (dataset paths, epochs, batch size).
+4. Train the model and monitor validation metrics.
+5. Export the best weights and use them for inference or auto-labeling additional images.
+
+Mermaid workflow diagram (paste inside a ```mermaid fenced block if your viewer requires it):
+
+```mermaid
+flowchart TD
+  Data[Dataset: images + labels] --> Prep[Preprocess & Organize]
+  Prep --> Train[Train model]
+  Train --> Eval[Evaluate & select best weights]
+  Eval --> Export[Export weights]
+  Export --> Inference[Run inference / Auto-label]
+  Inference --> Retrain[Optional: add new labels and retrain]
+```
+
 License & contact
 ------------------
 

@@ -26,12 +26,12 @@ This repository contains code for training and running an animal detection model
 **Mermaid flow:**
 
 ```mermaid
-flowchart LR
-  A[Download dataset (not included)] --> B[Organize folders: dataset/, leopard/, wildboar/]
-  B --> C[Prepare labels (labels/ .txt files for YOLO format)]
-  C --> D[Train model using `animal_detection.py`]
-  D --> E[Evaluate & Export weights]
-  E --> F[Run inference / use `auto_label.py` to label more images]
+  flowchart LR
+  A[Download dataset] --> B[Organize folders: dataset / leopard / wildboar]
+  B --> C[Prepare labels (YOLO .txt format)]
+  C --> D[Train model (animal_detection.py)]
+  D --> E[Evaluate and export weights]
+  E --> F[Run inference / Auto-label (auto_label.py)]
 ```
 
 Getting started
